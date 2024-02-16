@@ -1,0 +1,117 @@
+@charset "utf-8";
+@font-face {
+    font-family: 'Cosmetic';
+    src: url('css/font/Cosmetic-Bold.eot');
+    src: url('css/font/Cosmetic-Bold.eot?#iefix') format('embedded-opentype'),
+        url('css/font/Cosmetic-Bold.woff2') format('woff2'),
+        url('css/font/Cosmetic-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li {
+    list-style: none;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+body {
+    color: #333;
+    line-height: 1;
+}
+.inner {
+    max-width: 1280px;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+}
+.header .inner {   
+    margin: 20px auto; 
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;       
+    border-radius: 15px;   
+}
+.header .inner h1 figure {
+    /* height: 100px; */
+    /* height: 7.81vw; */
+    height: 50px;    
+}
+.header .inner h1 figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.header .inner .util button {
+    background-color: transparent;
+    border: none;
+    margin-left: 21px;
+    cursor: pointer;
+}
+.header .inner .util button img {
+    height: 30px;
+}
+.header .inner nav {
+    width: 100%;
+    /* padding: 50px; */
+    position: absolute;
+    top: 120px;
+    left: 0;
+    background-color: #000;
+    color: #fff;
+    border-radius: 20px;
+    text-align: center;
+    display: none;
+}
+.header .inner nav .gnb .depth01 {
+    margin: 30px 0;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #ffffff5c;
+}
+.header .inner nav .gnb .depth01:last-child {
+    /* margin-bottom: 0; */
+}
+.header .inner nav .gnb .depth01 > a {
+    font-size: 28px;
+    display: block;   
+    /* color: #a1a1a1;  */
+    color: #fff;
+}
+.header .inner nav .gnb .depth01 .depth02 {
+    display: none;
+}
+.header .inner nav .gnb .depth01 .depth02.on {
+    display: block;
+}
+.header .inner nav .gnb .depth01 .depth02 li {
+    font-size: 21px;
+    margin: 8px 0;
+}
+.main_visual {
+    height: 100vh;
+}
+.main_visual figure {
+    height: 100%;
+}
+.main_visual figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

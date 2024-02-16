@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2차메뉴</title>
+    <link rel="stylesheet" href="css/script17.style.css">
+    <script>
+        window.onload = () => {
+            let menuIcon = document.querySelector('.menu img');
+            let nav = document.querySelector('nav');
+
+            menuIcon.addEventListener('click', () => {
+                if (getComputedStyle(nav).display === 'none') {
+                    nav.style.display = 'block';
+                } else {
+                    nav.style.display = 'none';
+                }
+            });
+
+            let depth01 = document.querySelectorAll('.header .depth01 > a');
+
+            for(let i = 0; i < depth01.length; i++) {
+                depth01[i].addEventListener('click', () => {
+                    depth01[i].nextElementSibling.classList.toggle('on');                    
+                });                
+            };
+
+            for(let i = 0; i < depth01.length; i++) {
+                depth01[i].addEventListener('mouseenter', () => {
+                    //alert(i)
+                    if(getComputedStyle(depth01).color === '#fff') {
+                        depth01.style.color = 'royalblue';
+                    } else {
+                        depth01.style.color = '#fff';
+                    }
+                });
+            };
+        };
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <header class="header" id="header">
+            <div class="inner">
+                <h1>
+                    <a href="#">
+                        <figure>
+                            <img src="img/aesop_logo.png" alt="">
+                        </figure>
+                    </a>
+                </h1>
+                <div class="util">
+                    <button class="menu">
+                        <img src="img/menu.png" alt="">
+                    </button>
+                    <nav>
+                        <ul class="gnb">
+                            <li class="depth01">
+                                <a href="#">회사소개</a>
+                                <ul class="depth02">
+                                    <li><a href="#">menu1-1</a></li>
+                                    <li><a href="#">menu1-2</a></li>
+                                    <li><a href="#">menu1-3</a></li>
+                                    <li><a href="#">menu1-4</a></li>
+                                    <li><a href="#">menu1-5</a></li>
+                                </ul>
+                            </li><!-- .depth01 end /1 -->
+                            <li class="depth01">
+                                <a href="#">제품</a>
+                                <ul class="depth02">
+                                    <li><a href="#">menu2-1</a></li>
+                                    <li><a href="#">menu2-2</a></li>
+                                    <li><a href="#">menu2-3</a></li>
+                                    <li><a href="#">menu2-4</a></li>
+                                </ul>
+                            </li><!-- .depth01 end /2 -->
+                            <li class="depth01">
+                                <a href="#">고객문의</a>
+                                <ul class="depth02">
+                                    <li><a href="#">menu3-1</a></li>
+                                    <li><a href="#">menu3-2</a></li>
+                                    <li><a href="#">menu3-3</a></li>
+                                    <li><a href="#">menu3-4</a></li>
+                                    <li><a href="#">menu3-5</a></li>
+                                </ul>
+                            </li><!-- .depth01 end /3 -->
+                        </ul><!-- .gnb end -->
+                    </nav>
+                    <button class="search">
+                        <img src="img/icons8-search-50.png" alt="">
+                    </button>
+                </div><!-- .util end -->
+            </div><!-- .inner end -->
+        </header><!-- .header end -->
+        <main id="main">
+            <section class="main_visual">
+                <figure>
+                    <img src="img/re02_high-angle-foundation-container-rocks.jpg" alt="">
+                </figure>
+            </section><!-- .main_visual end -->
+        </main><!-- #main end -->
+    </div><!-- #wrap end -->
+</body>
+
+</html>
